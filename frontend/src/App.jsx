@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Dashboard from "./pages/Dashboard";
-
+const API_BASE = "http://127.0.0.1:8001";
 function App() {
 
     const [documents, setDocuments] = useState([]);
@@ -15,7 +15,7 @@ function App() {
 
         try {
 
-            const response = await fetch("http://127.0.0.1:8001/documents");
+            const response = await fetch(`${API_BASE}/documents`);
 
             const data = await response.json();
 
@@ -39,8 +39,7 @@ function App() {
     formData.append("file", file);
 
     try {
-          const response = await fetch(
-         "http://127.0.0.1:8001/upload",
+          const response = await fetch(`${API_BASE}/upload`, 
        {
            method: "POST",
            body: formData
@@ -81,8 +80,7 @@ async function handleDelete(filename) {
 
     try {
 
-        const response = await fetch(
-            "http://127.0.0.1:8001/delete",
+        const response = await fetch(`${API_BASE}/delete`,
             {
                 method: "DELETE",
                 headers: {
@@ -145,8 +143,7 @@ async function handleDelete(filename) {
 
     try {
 
-        const response = await fetch(
-            "http://127.0.0.1:8001/chat",
+        const response = awaitfetch(`${API_BASE}/chat`,
             {
                 method: "POST",
                 headers: {
