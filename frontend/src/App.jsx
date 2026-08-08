@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Dashboard from "./pages/Dashboard";
-const API_BASE = "http://127.0.0.1:8001";
+const API_BASE = "https://enterprise-ai-knowledge-copilot-production.up.railway.app";
 function App() {
 
     const [documents, setDocuments] = useState([]);
