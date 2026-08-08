@@ -143,7 +143,7 @@ async function handleDelete(filename) {
 
     try {
 
-        const response = awaitfetch(`${API_BASE}/chat`,
+        const response = await fetch(`${API_BASE}/chat`,
             {
                 method: "POST",
                 headers: {
