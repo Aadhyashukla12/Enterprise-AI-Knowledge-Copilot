@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Dashboard from "./pages/Dashboard";
-const API_BASE = "https://enterprise-ai-knowledge-copilot-production.up.railway.app";
+const API_BASE = "https://enterprise-ai-knowledge-copilot-production-807e.up.railway.app";
 function App() {
 
     const [documents, setDocuments] = useState([]);
